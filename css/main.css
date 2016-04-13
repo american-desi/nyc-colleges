@@ -1,0 +1,33 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 90%;
+      }
+
+
+h1 {
+	text-align: center;
+	background-color: #00cc00;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#search {
+	float: left;
+	width: 25%;
+	vertical-align: center;
+
+}
+#searchbox {
+	width: 85%;
+}
+#map {
+	float: left;
+	width: 75%;
+}
+
+.top {
+	background-color: orange;
+}
