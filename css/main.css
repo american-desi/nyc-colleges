@@ -4,30 +4,14 @@ html, body {
         padding: 0;
       }
       #map {
-        height: 90%;
+        height: 100%;
+        width: 80%;
       }
 
-
-h1 {
-	text-align: center;
-	background-color: #00cc00;
-	font-family: Verdana, Geneva, sans-serif;
+.search-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
 }
 
-#search {
-	float: left;
-	width: 25%;
-	vertical-align: center;
-
-}
-#searchbox {
-	width: 85%;
-}
-#map {
-	float: left;
-	width: 75%;
-}
-
-.top {
-	background-color: orange;
-}

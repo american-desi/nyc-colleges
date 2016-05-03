@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Neighborhood Map</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <script src= "views/app-view.js"></script>
-    <link rel="stylesheet" href="css/main.css"></link>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-
   <body>
-  	<div class="top">
-  	<h1>Neighborhood College's in NYC</h1>
-  </div>
-  	<div id="search">
-  		<input id="searchbox" type="text" name="search available locations">
-  		<div id="locations">
-  			<ul>
-  				<div id="markers"> </div>
-  			</ul>
-  		</div>
-
-  	</div>
-
-    <div id="map" width="500" height="500"></div>
-    <div id="infobox"> 
-    	<div id="name"></div>
-    	<div id="address"></div>
-    	<div id="wiki-links"></div>
-    	<div id="nyt-articles"></div>
+    <div class="search-list">
+      <div class="search-locations">
+        <form class="input-group" data-bind="submit: updateSearch">
+          <input type="text" class="form-control" data-bind="value: searchTerm">
+            <button class="btn btn-danger" type="button" data-bind="click: updateYelpResults">Search</button>
+        </form>
+      </div>
+      <ul class="results">
+        <li class="location" data-bind="location">Loc 1</li>
+      </ul>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwFz8Cute7HgQnW4Mj8ltVyAV0hDhtPEc&callback=initMap"
-    async defer></script>
+
+    <div id="map"></div>
+    <script>
+      
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwFz8Cute7HgQnW4Mj8ltVyAV0hDhtPEc&callback=initMap">
+    </script>
+    <script type='text/javascript' src='js/knockout-3.4.0.js'></script>
   </body>
 </html>
