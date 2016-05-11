@@ -12,11 +12,11 @@
       <div class="search-locations">
         <form class="input-group" data-bind="submit: updateSearch">
           <input type="text" class="form-control" data-bind="value: searchTerm">
-            <button class="btn btn-danger" type="button" data-bind="click: updateYelpResults">Search</button>
+            <button class="" type="button" data-bind="click: INSERT HERE">Search</button>
         </form>
       </div>
       <ul class="results">
-        <li class="location" data-bind="location">Loc 1</li>
+        <li class="location" data-bind="foreach: markers">Loc 1</li>
       </ul>
     </div>
 
@@ -28,6 +28,6 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwFz8Cute7HgQnW4Mj8ltVyAV0hDhtPEc&callback=initMap">
     </script>
-    <script type='text/javascript' src='js/knockout-3.4.0.js'></script>
+    <script type= 'text/javascript' src='js/knockout.js'></script>
   </body>
 </html>

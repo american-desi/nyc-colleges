@@ -7,81 +7,78 @@ function initMap() {
         });
 }
 
-function Map(){
+// function Map(){
 
-	var self = this;
+// 	var self = this;
 
-	self.locations = ko.observableArray([
+// 	self.locations = ko.observableArray([
 
-	]);
+// 	]);
 
-	self.searchTerm = [
+// 	self.searchTerm = [
 
-	];
+// 	];
 
-	self.googleImg = [
+// 	self.googleImg = [
 
-	];
+// 	];
 
-	self.wikiLink = [
+// 	self.wikiLink = [
 
-	];
+// 	];
+// };
 
-
-};
-
-
-
-
-var markers = [
+var locations = [
 	{
 		title: "Columbia University",
-		lat: 40.8075,
-		lng: -73.9626,
+		latlng: {lat: 40.8075, lng: -73.9626},
 		cityAddress: "New York, NY 10027",
-		url: "www.columbia.edu"
+		url: "www.columbia.edu",
+		cpuTitle: "colu"
 	},
 	{
 		title: "Harvard University",
-		lat: 42.3770,
-		lng: -71.1167,
+		latlng: {lat: 42.3770, lng: -71.1167},
 		streetAddress: "Cambridge, MA 02138",
 		cityAddress: "",
-		url: "www.harvard.edu"
+		url: "www.harvard.edu",
+		cpuTitle: "hrvdu"
 	},
 	{
 		title: "Queens College",
-		lat: 40.7363,
-		lng: -73.8161,
+		latlng: {lat: 40.7363, lng: -73.8161},
 		cityAddress: "Flushing, NY 11367",
-		url: "www.qc.cuny.edu"
+		url: "www.qc.cuny.edu",
+		cpuTitle: "qc"
 	},
 	{
 		title: "University of Connecticut",
-		lat: 41.8077,
-		lng: -72.2540,
+		latlng: {lat: 41.8077, lng: -72.2540},
 		cityAddress: "Storrs, CT 06269",
-		url: "www.uconn.edu"
+		url: "www.uconn.edu",
+		cpuTitle: "uconn"
 	},
 	{
 		title: "Drexel University",
-		lat: 39.9566,
-		lng: 75.1899,
+		latlng: {lat: 39.9566, lng: 75.1899},
 		cityAddress: "Philadelphia, PA 19104",
-		url: "www.drexel.edu"
+		url: "www.drexel.edu",
+		cpuTitle: "drexu"
 	}
 ];
 
-var ViewModel = function() {
-	// var marker = new google.maps.Marker({
-   // position: myLatLng,
-    //map: map,
-   // title: 'Hello World!'
-  //});
+var ViewModel = function(locations) {
+	for (var i = 0 ; i < locations.length; i++){
+		var marker = new google.maps.Marker({
+    	position: myLatLng,
+    	map: map,
+   		title: locations.title
+  	});
+
+	}
+	
+	
 
 };
 
 ko.applyBindings(new ViewModel());
-
-
-
